@@ -80,7 +80,7 @@
       </nav><!-- .navbar -->
 
       <div class="header-social-links">
-        <a href="https://api.whatsapp.com/send?phone=5583999801146&text=Olá, estou entrando em contato via site para mais informações." target="_blank" class="twitter"><i class="bi bi-whatsapp"></i></a>
+        <a href="javascript:void(0)" onclick="checkDevice();" class="twitter"><i class="bi bi-whatsapp"></i></a>
         <a href="https://instagram.com/raphaelakarinastudio" target="_blank" class="instagram"><i class="bi bi-instagram"></i></a>
       </div>
 
@@ -206,6 +206,22 @@
     </section><!-- End Contact Section -->
 
     <script type="text/javascript">
+
+      function checkDevice() {
+        if( navigator.userAgent.match(/Android/i)
+            || navigator.userAgent.match(/webOS/i)
+            || navigator.userAgent.match(/iPhone/i)
+            || navigator.userAgent.match(/iPad/i)
+            || navigator.userAgent.match(/iPod/i)
+            || navigator.userAgent.match(/BlackBerry/i)
+            || navigator.userAgent.match(/Windows Phone/i)
+            ){
+              window.open('whatsapp://send?text=Olá, estou entrando em contato via site para mais informações.&phone=5583999801146');
+              }
+            else {
+              window.open('https://api.whatsapp.com/send?phone=5583999801146&text=Olá, estou entrando em contato via site para mais informações.');
+              }
+      }
 
       function enviarFormulario() {
           var name = $("#name").val();

@@ -108,7 +108,7 @@
           <a href="contact.html" class="btn-get-started">Agende um horário</a>
         </div>
         <div class="col-lg-12 text-center mt-4">
-          <a href="https://api.whatsapp.com/send?phone=5583999801146&text=Olá, estou entrando em contato via site para mais informações." target="_blank" style="color: white;" class="twitter"><i style="font-size: 23px;" class="bi bi-whatsapp"></i></a>&nbsp;&nbsp;
+          <a href="javascript:void(0)" onclick="checkDevice();" style="color: white;" class="twitter"><i style="font-size: 23px;" class="bi bi-whatsapp"></i></a>&nbsp;&nbsp;
           <!--<a href="#" class="facebook"><i class="bi bi-facebook"></i></a>-->
           <a href="https://instagram.com/raphaelakarinastudio" target="_blank" style="color: white;" class="instagram"><i style="font-size: 23px;" class="bi bi-instagram"></i></a>
           <!--<a href="#" class="linkedin"><i class="bi bi-linkedin"></i></i></a>-->
@@ -199,6 +199,26 @@
     </section><!-- End Gallery Section -->
 
   </main><!-- End #main -->
+
+  <script type="text/javascript">
+
+    function checkDevice() {
+      if( navigator.userAgent.match(/Android/i)
+          || navigator.userAgent.match(/webOS/i)
+          || navigator.userAgent.match(/iPhone/i)
+          || navigator.userAgent.match(/iPad/i)
+          || navigator.userAgent.match(/iPod/i)
+          || navigator.userAgent.match(/BlackBerry/i)
+          || navigator.userAgent.match(/Windows Phone/i)
+          ){
+            window.open('whatsapp://send?text=Olá, estou entrando em contato via site para mais informações.&phone=5583999801146');
+            }
+          else {
+            window.open('https://api.whatsapp.com/send?phone=5583999801146&text=Olá, estou entrando em contato via site para mais informações.');
+            }
+    }
+
+</script>
 
   <!-- ======= Footer ======= -->
   <footer id="footer" class="footer">
