@@ -217,15 +217,27 @@
 
           if (name != "" && email != "" && phone != "" && treatment != "" && treatment != null && time != "" && date != "") {
 
-            window.open('whatsapp://send?text=Olá,' +
+            if( navigator.userAgent.match(/Android/i)
+            || navigator.userAgent.match(/webOS/i)
+            || navigator.userAgent.match(/iPhone/i)
+            || navigator.userAgent.match(/iPad/i)
+            || navigator.userAgent.match(/iPod/i)
+            || navigator.userAgent.match(/BlackBerry/i)
+            || navigator.userAgent.match(/Windows Phone/i)
+            ){
+              window.open('whatsapp://send?text=Olá,' +
                   ' meu nome é: ' + name + ', meu e-mail: ' + email + ', meu telefone: ' + phone + '. ' +
                   'Gostaria de saber se tem horário disponível para o agendamento: ' + treatment + ', ' +
                   'no dia: ' + date + ', às: ' + time + ' horas.' + ' Aguardo retorno!' + '&phone=5583999801146');
+              }
+            else {
+              window.open('https://api.whatsapp.com/send?phone=5583999801146&text=Olá,' +
+                ' meu nome é: ' + name + ', meu e-mail: ' + email + ', meu telefone: ' + phone + '. ' +
+                'Gostaria de saber se tem horário disponível para o agendamento: ' + treatment + ', ' +
+                'no dia: ' + date + ', às: ' + time + ' horas.' + ' Aguardo retorno!');
+              }
+ 
 
-              //window.open('https://wa.me/5583999801146&text=Olá,' +
-                //  ' meu nome é: ' + name + ', meu e-mail: ' + email + ', meu telefone: ' + phone + '. ' +
-                  //'Gostaria de saber se tem horário disponível para o agendamento: ' + treatment + ', ' +
-                  //'no dia: ' + date + ', às: ' + time + ' horas.' + ' Aguardo retorno!');
           } else {
               alert('Preencha todos os campos corretamente!')
           }
