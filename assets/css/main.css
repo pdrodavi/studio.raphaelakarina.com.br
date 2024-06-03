@@ -19,7 +19,7 @@
 /* Colors */
 :root {
   --color-default: #fafafa;
-  --color-primary: #a7276d;
+  --color-primary: #d3aa51;
   --color-secondary: #161718;
 }
 
@@ -43,7 +43,7 @@ a {
 }
 
 a:hover {
-  color: #8d1f68;
+  color: #c0973e;
   text-decoration: none;
 }
 
@@ -134,7 +134,7 @@ h6 {
 }
 
 .page-header .cta-btn:hover {
-  background: #bc2c74;
+  background: #c0973e;
 }
 
 /*--------------------------------------------------------------
@@ -161,7 +161,7 @@ h6 {
 }
 
 .scroll-top:hover {
-  background: rgba(167, 39, 135, 0.8);
+  background: rgba(215, 181, 109, 0.8);
   color: #fff;
 }
 
@@ -192,7 +192,7 @@ h6 {
 }
 
 .scroll-work:hover {
-  background: rgba(167, 39, 135, 0.8);
+  background: rgba(215, 181, 109, 0.8);
   color: #fff;
 }
 
@@ -1304,7 +1304,7 @@ h6 {
 }
 
 .hero .btn-get-started:hover {
-  background: #85035a;
+  background: #c09435;
   color: white;
 }
 
@@ -1323,7 +1323,7 @@ h6 {
 }
 
 .btn-msg:hover {
-  background: #85035a;
+  background: #c09435;
   color: white;
 }
 
